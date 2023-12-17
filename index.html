@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2>Question # 01</h2>
+
+    <script>
+
+        var date = new Date();
+        document.write(date + "<br>");
+
+
+    </script>
+
+    <h2>Question # 02</h2>
+
+    <script>
+        var now = new Date();
+
+        var month = now.toLocaleString('en-US',{month : "long"});
+
+        document.write("The Current Month Is : " + month)
+
+
+        // var monthName = ["January", "February", "March", "April", "May", "June",
+        //     "July", "August", "September", "October", "November", "December"];
+
+        // document.write("The Current Month Is :" + " " + monthName[month])
+
+    </script>
+ <h2>Question # 03</h2>
+
+ <script>
+     var now = new Date().toString();
+var dayName = now.slice(0,3);
+
+
+    //  var day = now.toLocaleString('en-US',{day : "numeric"});
+
+    document.write("Today Is :"+ dayName);
+
+
+     // var monthName = ["January", "February", "March", "April", "May", "June",
+     //     "July", "August", "September", "October", "November", "December"];
+
+     // document.write("The Current Month Is :" + " " + monthName[month])
+
+ </script>
+
+<h2>Question # 04</h2>
+
+<script>
+
+    var now = new Date();
+    var day = now.getDay();
+   
+    if(day === 0 ||day === 6){
+        document.write("It's Fun Day!")
+    }
+    else{
+        document.write("It's Working Day")
+    }
+
+</script>
+
+<h2>Question # 05</h2>
+
+<script>
+
+    var now = new Date();
+    var day = now.getDate();
+   
+    if(day < 16){
+        document.write("First Fifteen Days Of The Month.")
+    }
+    else{
+        document.write("It's Last Days Of The Month.")
+    }
+
+</script>
+
+<h2>Question # 06</h2>
+
+<script>
+
+    var CurrentDate = new Date();
+    document.write("Current Date Is : " + CurrentDate + "<br>");
+
+    var msec = Math.floor(CurrentDate / (1000*60));
+document.write("<br> Elapsed MilliSeconds Since 01 January 1970 : " + msec)
+
+var mint = Math.floor(CurrentDate / (1000*60*60)) 
+document.write("<br> Elapsed Minutes Since 01 January 1970 : " + mint)
+
+
+</script>
+
+<h2>Question # 07</h2>
+
+<script>
+
+var now = new Date();
+var hr = now.getHours();
+document.write()
+if(hr <= 12){
+    document.write("It's AM ! ")
+}
+else if(hr > 12 ){
+    document.write("It's PM ! ")
+    
+}
+</script>
+
+<h2>Question # 08</h2>
+
+<script>
+
+var laterDate = new Date("December 31, 2024");
+document.write(laterDate);
+
+
+</script>
+<h2>Question # 09</h2>
+
+<script>
+
+var firstRamadan = new Date("March 23, 2023");
+var ramadan = firstRamadan.getTime();
+
+var currentTime = new Date();
+
+ var crtDate = currentTime.getTime();
+ 
+ var total = currentTime - firstRamadan
+
+var totalDays = total / (1000*60*60*24)
+
+document.write(Math.floor(totalDays ) + " Days Have Passsed Since 1st Ramadan, 2023")
+
+
+
+</script>
+
+<h2>Question # 10</h2>
+
+<script>
+
+var begDate = new Date("January 01,2023");
+
+var now = new Date();
+
+var s_begDate = begDate.getTime();
+var s_now = now.getTime();
+
+var total = s_now - s_begDate
+
+var totalSeconds = total / (1000*60);
+document.write("On Refrence Date Is : " + now + ", <br>" + Math.floor(totalSeconds) + " Seconds Had Passed Since Beginning Of 2023 .")
+
+
+
+</script>
+
+<h2>Question # 11</h2>
+
+<script>
+
+var currentDate = new Date();
+
+var currentHour = currentDate.getHours();
+
+currentDate.setHours(currentHour - 1)
+
+var now = new Date();
+
+document.write(now + "<br>")
+
+document.write("One Hour Ago : " + currentDate)
+
+
+</script>
+
+<h2>Question # 12</h2>
+
+<script>
+
+var todayDate = new Date();
+
+todayDate.setFullYear(todayDate.getFullYear() - 100)
+
+var now = new Date();
+
+document.write("Current Date And Time : " + now + "<br>")
+document.write( "100 Years Back : " + todayDate)
+
+
+
+</script>
+
+<h2>Question # 13</h2>
+
+<script>
+
+
+
+var birthDate = new Date(prompt("Enter Your Birth BirthDate","18 Sep ,1998" ));
+
+var currentTime = new Date();
+
+
+var birthYear = birthDate.getFullYear();
+var currentYear = currentTime.getFullYear();
+
+var totalYear = currentYear - birthYear;
+
+document.write("Your Birth Year Is : " + birthYear + "<br>")
+document.write("Your Total Age Is : " + totalYear)
+
+
+</script>
+
+<h2>Question # 14</h2>
+
+<script>
+
+document.write("<h3>Your K-Electric Bill</h3>")
+
+var consumerName = prompt("Enter Your Name");
+document.write("Name : " + consumerName + "<br>")
+ 
+var currentMonth = new Date();
+
+var crntMonth = currentMonth.toLocaleString('en-US' , {month : "long"})
+document.write("Month : " + crntMonth + "<br>");
+
+var units = 115;
+document.write("Total Units : " + units + "<br>")
+var perUnit = 20;
+document.write("Rate Per Unit : " + perUnit + "<br>"  + "<br>")
+
+var dueDate = units * perUnit;
+document.write("Net Amonut Payable (Within Due Date) : " + dueDate + "<br>")
+
+var lateFee = 560;
+document.write("Late Payment Surcharge : " + lateFee + "<br>")
+
+var afterDueDate = dueDate + lateFee;
+document.write("Amonut Payable (After Due Date) : " + afterDueDate )
+
+
+
+</script>
+
+</body>
+
+</html>
